@@ -1,9 +1,8 @@
 package com.example.test799.Controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,8 +11,10 @@ import java.util.Locale;
 
 @Controller
 public class publicController {
+    ArrayList<String>Companies=new ArrayList<String>();
+
     @ResponseBody
-    @GetMapping("/home/{name}")
+    @GetMapping("/")
     public HashMap<String, String> welcome(@PathVariable("name")  String name){
         ArrayList<String>data=new ArrayList<String>();
         HashMap<String,String> Dat=new HashMap<String, String>();
@@ -33,5 +34,14 @@ public class publicController {
         stu.add(student);
         stu.add(student2);
         return stu;
+    }
+
+
+    @ResponseBody
+    @PostMapping("/add/company")
+    public RedirectView addCompany(@RequestParam String companyName){
+        this.Companies.add(companyName);
+
+          return new RedirectView("/all/companies");
     }
 }
