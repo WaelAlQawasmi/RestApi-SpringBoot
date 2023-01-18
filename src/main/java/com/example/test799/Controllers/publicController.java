@@ -12,13 +12,14 @@ import java.util.Locale;
 @Controller
 public class publicController {
     ArrayList<String>Companies=new ArrayList<String>();
-
+    HashMap<String,String> CompaniesOwner =new HashMap<>();
     @ResponseBody
     @GetMapping("/")
     public HashMap<String, String> welcome(@PathVariable("name")  String name){
         ArrayList<String>data=new ArrayList<String>();
         HashMap<String,String> Dat=new HashMap<String, String>();
         Dat.put(name.toUpperCase(Locale.ROOT),"end");
+        CompaniesOwner.put(name,name);
         data.add("hi");
         data.add("by");
         return Dat;
@@ -71,6 +72,8 @@ public class publicController {
 
         return Companies;
     }
+
+
 
 
 }
