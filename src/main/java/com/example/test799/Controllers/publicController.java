@@ -44,4 +44,33 @@ public class publicController {
 
           return new RedirectView("/all/companies");
     }
+
+
+    @ResponseBody
+    @PutMapping ("/company/{id}")
+    public RedirectView editCompany(@RequestParam String companyName,@PathVariable("id") int id){
+        Companies.set(id,companyName);
+
+        return new RedirectView("/all/companies");
+    }
+
+    @ResponseBody
+    @DeleteMapping ("/company/{id}")
+    public RedirectView deleteCompany(@PathVariable("id") int id){
+        Companies.remove(id);
+
+        return new RedirectView("/all/companies");
+    }
+
+
+
+    @ResponseBody
+    @GetMapping("/all/companies")
+    public List<String> addCompany(){
+
+
+        return Companies;
+    }
+
+
 }
