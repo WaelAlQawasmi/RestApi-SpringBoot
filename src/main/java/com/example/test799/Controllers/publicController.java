@@ -68,11 +68,8 @@ public class publicController {
     @ResponseBody
     @GetMapping("/all/companies")
     public List<String> addCompany(){
-
-
         return Companies;
     }
-
 
 
 
