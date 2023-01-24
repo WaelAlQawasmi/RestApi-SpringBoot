@@ -1,4 +1,4 @@
-package com.example.test799.Entity;
+package com.example.restApi.Entity;
 
 import lombok.*;
 

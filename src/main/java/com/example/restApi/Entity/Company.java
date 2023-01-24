@@ -1,9 +1,6 @@
-package com.example.test799.Entity;
+package com.example.restApi.Entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,7 +14,10 @@ import javax.persistence.Id;
 public class Company {
     @Id
     int id;
+    @NonNull
     String name;
+    @NonNull
+
     String phoneNumber;
 
 }

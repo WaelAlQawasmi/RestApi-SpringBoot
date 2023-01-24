@@ -1,13 +1,13 @@
-package com.example.test799;
+package com.example.restApi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Test799Application {
+public class RestApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Test799Application.class, args);
+		SpringApplication.run(RestApiApplication.class, args);
 	}
 
 }

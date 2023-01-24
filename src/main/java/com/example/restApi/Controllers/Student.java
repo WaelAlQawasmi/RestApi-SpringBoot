@@ -1,4 +1,4 @@
-package com.example.test799.Controllers;
+package com.example.restApi.Controllers;
 
 public class Student {
     String name;

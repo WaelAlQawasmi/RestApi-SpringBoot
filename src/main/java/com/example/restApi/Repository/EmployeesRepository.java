@@ -1,6 +1,6 @@
-package com.example.test799.Repository;
+package com.example.restApi.Repository;
 
-import com.example.test799.Entity.Employees;
+import com.example.restApi.Entity.Employees;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
