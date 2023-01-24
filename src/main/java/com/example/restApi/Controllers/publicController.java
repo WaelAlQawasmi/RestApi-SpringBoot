@@ -1,4 +1,4 @@
-package com.example.test799.Controllers;
+package com.example.restApi.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
