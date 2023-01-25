@@ -1,2 +1,8 @@
 # RestFull Api for companies system
-- Crud for company 
+- Micro services
+- Data transfer objects (DTO)
+## Add company
+- ![FindCompany.png](img/addCompany.png)
+## Find company
+- ![FindCompany.png](img/FindCompany.png)
+
