@@ -3,6 +3,7 @@ package com.example.restApi.Entity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -13,7 +14,8 @@ import javax.persistence.Id;
 
 public class Company {
     @Id
-    int id;
+@GeneratedValue
+    Long id;
     @NonNull
     String name;
     @NonNull
