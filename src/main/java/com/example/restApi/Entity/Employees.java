@@ -2,9 +2,8 @@ package com.example.restApi.Entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -15,13 +14,19 @@ import javax.persistence.Id;
 public class Employees {
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue
+
     private Long id;
     @NonNull
     String name;
     @NonNull
     int salary;
     @NonNull
-    int startDate;
+    String startDate;
+    @NonNull
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    Company company;
 
 
 

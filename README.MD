@@ -7,6 +7,8 @@
 - ![FindCompany.png](img/addCompany.png)
 ## Find company
 - ![FindCompany.png](img/FindCompany.png)
+## Add employee
+![addEmployee.png](img/addEmployee.png)
 
 
 

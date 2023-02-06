@@ -10,14 +10,14 @@ import org.springframework.web.servlet.view.RedirectView;
 
 
 @RestController
-public class publicController {
+public class companyController {
 
 
   @Autowired
   CompanyService companyServise;
 
 
-    @PostMapping("/add")
+    @PostMapping("/company/add/")
     public HttpStatus addCompany(@RequestBody companyDTO company){
       return companyServise.addCompany(company);
     }
@@ -26,21 +26,14 @@ public class publicController {
 
     @GetMapping ("/company/{id}")
     public Company editCompany(@PathVariable("id") Long id){
-
         return companyServise.findCompanyById(id);
     }
 
     @ResponseBody
     @DeleteMapping ("/company/{id}")
     public RedirectView deleteCompany(@PathVariable("id") int id){
-
         return new RedirectView("/all/companies");
     }
-
-
-
-
-
 
 
 }
