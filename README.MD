@@ -10,5 +10,6 @@
 ## Add employee
 ![addEmployee.png](img/addEmployee.png)
 
-
+## sql
+![sqlScema.png](img/sqlScema.png)
 

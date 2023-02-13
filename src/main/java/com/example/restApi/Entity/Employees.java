@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -27,6 +28,8 @@ public class Employees {
     @ManyToOne
     @JoinColumn(name = "company_id")
     Company company;
+    @OneToMany(mappedBy = "employee")
+    List<enrollment> enrollments;
 
 
 
