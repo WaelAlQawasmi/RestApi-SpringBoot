@@ -16,12 +16,11 @@ import java.util.List;
 
 public class Company {
     @Id
-@GeneratedValue
+    @GeneratedValue
     Long id;
     @NonNull
     String name;
     @NonNull
-
     String phoneNumber;
 
     @OneToMany(mappedBy = "company")
