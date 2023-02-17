@@ -1,5 +1,6 @@
 package com.example.restApi.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -14,7 +15,6 @@ import java.util.List;
 
 public class Employees {
     @Id
-    @Column(name = "id", nullable = false)
     @GeneratedValue
 
     private Long id;
@@ -26,6 +26,7 @@ public class Employees {
     String startDate;
     @NonNull
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "company_id")
     Company company;
     @OneToMany(mappedBy = "employee")

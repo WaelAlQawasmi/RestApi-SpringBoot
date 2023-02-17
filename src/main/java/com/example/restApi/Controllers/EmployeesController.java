@@ -1,12 +1,12 @@
 package com.example.restApi.Controllers;
 
 import com.example.restApi.DTO.EmployeeDOT;
+import com.example.restApi.Entity.Employees;
 import com.example.restApi.Servises.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class EmployeesController {
@@ -17,5 +17,27 @@ public class EmployeesController {
     public String addEmployee(@RequestBody EmployeeDOT employeeDOT){
         employeesService.addEmpEmployees(employeeDOT);
         return "employee added successfully";
+    }
+
+    @GetMapping("/employee/findbyname/{name}")
+    public Employees findbyname(@PathVariable("name") String name){
+      return   employeesService.findEmployeeByName(name);
+    }
+
+
+    @GetMapping("/employee/find-company-of-employee/{id}")
+    public String findCompany(@PathVariable("id") Long id){
+        return   employeesService.findCompanyOfEmployeeById(id);
+    }
+
+    @GetMapping("/employee/findEmployeeDetails/{id}")
+    public List<Object[]> findEmployeeDetails(@PathVariable("id") Long id){
+        return   employeesService.findEmployeeDetailsById(id);
+    }
+
+
+    @GetMapping("/employee/findEmployeeNameById/{id}")
+    public String findEmployeeNameById(@PathVariable("id") Long id){
+        return   employeesService.findEmployeeNameById(id);
     }
 }

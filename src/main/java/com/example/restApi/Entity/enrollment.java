@@ -1,6 +1,7 @@
 package com.example.restApi.Entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class enrollment {
     String leaving;
 
     @NonNull
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "employee_id")
     Employees employee;
