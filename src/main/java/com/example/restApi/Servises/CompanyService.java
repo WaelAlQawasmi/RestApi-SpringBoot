@@ -24,5 +24,7 @@ public class CompanyService {
          return companyRepository.findById(id) .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
 
       }
+
+
 }
 
