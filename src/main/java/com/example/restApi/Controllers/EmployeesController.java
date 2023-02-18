@@ -6,6 +6,7 @@ import com.example.restApi.Servises.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 
 @RestController
@@ -14,7 +15,7 @@ public class EmployeesController {
     EmployeesService employeesService;
 
     @PostMapping("/employee/add")
-    public String addEmployee(@RequestBody EmployeeDOT employeeDOT){
+    public String addEmployee(@RequestBody EmployeeDOT employeeDOT) throws ParseException {
         employeesService.addEmpEmployees(employeeDOT);
         return "employee added successfully";
     }
@@ -39,5 +40,11 @@ public class EmployeesController {
     @GetMapping("/employee/findEmployeeNameById/{id}")
     public String findEmployeeNameById(@PathVariable("id") Long id){
         return   employeesService.findEmployeeNameById(id);
+    }
+
+
+    @GetMapping("/employee/findBetweenTwoDates/")
+    public List<Employees> findBetweenTwoDates(@RequestParam String start, @RequestParam String end) throws ParseException {
+        return   employeesService.findEmployeesStartBetweenTwoDates(start,end);
     }
 }
