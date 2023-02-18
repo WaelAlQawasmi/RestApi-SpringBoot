@@ -2,8 +2,10 @@ package com.example.restApi.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +25,8 @@ public class Employees {
     @NonNull
     int salary;
     @NonNull
-    String startDate;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    LocalDate startDate;
     @NonNull
     @ManyToOne
     @JsonIgnore

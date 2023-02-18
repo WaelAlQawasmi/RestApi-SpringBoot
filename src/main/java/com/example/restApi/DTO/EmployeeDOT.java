@@ -2,6 +2,8 @@ package com.example.restApi.DTO;
 
 import lombok.*;
 
+import java.util.Date;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -14,7 +16,7 @@ public class EmployeeDOT {
 
     public int salary;
 
-    public  String startDate;
+    public String startDate;
 
     public   Long CompanyId;
 }

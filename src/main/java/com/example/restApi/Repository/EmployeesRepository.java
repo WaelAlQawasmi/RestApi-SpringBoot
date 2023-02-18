@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Repository
@@ -22,6 +24,10 @@ public interface EmployeesRepository extends JpaRepository<Employees,Long> {
     @Query(value = "SELECT c.name FROM Employees e INNER JOIN Company c ON e.company_id=c.id   WHERE e.id = ?1",
             nativeQuery = true)
     String findCompanyNameById(Long id);
+
+     List<Employees> findBystartDateBetween(LocalDate start , LocalDate end);
+
+
 
 }
 
