@@ -1,19 +1,25 @@
 # RestFull Api for companies system
 
--  Micro services
--  Sping data , spring security
+- Micro services
+- Spring data (Repositories , Entities  ) ,
+- spring security
 - Data transfer objects (DTO)
-## Add company
+### sign up
+![signup.png](img/signup.png)
+
+### sign in
+![signup.png](img/login.png)
+### Add company
 - ![FindCompany.png](img/addCompany.png)
-## Find company
+### Find company
 - ![FindCompany.png](img/FindCompany.png)
-## Add employee
+### Add employee
 ![addEmployee.png](img/addEmployee.png)
 
 
-## find employees that  start date between two dates
+### find employees that  start date between two dates
 ![findBetweenTwoDates.png](img/findBetweenTwoDates.png)
 
-## sql
+### sql
 ![sqlScema.png](img/sqlScema.png)
 
