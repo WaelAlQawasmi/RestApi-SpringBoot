@@ -24,7 +24,6 @@ class companyTests {
 	void testServiceAddCompany()  {
 		companyDTO company= new companyDTO("company","079999");
 		HttpStatus addUserExpected= CompanyService.addCompany(company);
-		companyController.addCompany(company);
 		assertEquals(addUserExpected,HttpStatus.OK);
 	}
 
