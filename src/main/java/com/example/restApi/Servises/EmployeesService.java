@@ -30,11 +30,7 @@ public class EmployeesService {
         DateTimeFormatter fIn = DateTimeFormatter.ofPattern( "uuuu-MM-dd" , Locale.UK );  // As a habit, specify the desired/expected locale, though in this case the locale is irrelevant.
 
         LocalDate ld = LocalDate.parse( employeeDOT.startDate ,fIn);
-
-
-//timezone of your database
-
-
+          //timezone of your database
         Employees employee= new Employees(employeeDOT.getName(), employeeDOT.getSalary(), ld,company);
         employeesRepository.save(employee);
         return "the Employee add successfully";

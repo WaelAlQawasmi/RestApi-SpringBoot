@@ -4,6 +4,7 @@
 - Spring data (Repositories , Entities  ) ,
 - spring security
 - Data transfer objects (DTO)
+- Jupiter test
 ### sign up
 ![signup.png](img/signup.png)
 
