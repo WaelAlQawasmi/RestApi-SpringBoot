@@ -37,10 +37,11 @@ public class EmployeesController {
     }
 
 
-    @GetMapping("/employee/findEmployeeNameById/{id}")
-    public String findEmployeeNameById(@PathVariable("id") Long id){
+    @GetMapping("/employee/findEmployeeNameById/")
+    public String findEmployeeNameById(@RequestParam("id") Long id){
         return   employeesService.findEmployeeNameById(id);
     }
+
 
 
     @GetMapping("/employee/findBetweenTwoDates/")
