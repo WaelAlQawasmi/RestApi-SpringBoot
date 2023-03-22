@@ -49,8 +49,5 @@ public class EmployeesController {
         return   employeesService.findEmployeesStartBetweenTwoDates(start,end);
     }
 
-    @GetMapping("/employee/findBetweenTwoDates/")
-    public List<Employees> findBetweenTwoDates2(@RequestParam String start, @RequestParam String end) throws ParseException {
-        return   employeesService.findEmployeesStartBetweenTwoDates(start,end);
-    }
+
 }
